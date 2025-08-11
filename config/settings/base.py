@@ -35,13 +35,16 @@ GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-XXXX-Y'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # (배포에서 Whitenoise 쓴다면 prod.py에서만 ↓ 추가)
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
+    # CORS는 CommonMiddleware 보다 앞!
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
 ]
 
 CSRF_TRUSTED_ORIGINS = [
