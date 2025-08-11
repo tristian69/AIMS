@@ -3,6 +3,8 @@ db.sqlite3
 __pycache__/
 *.pyc
 .venv_dj31/
+staticfiles/
+media/
 aims.pem
 aims.pub
 
@@ -109,4 +111,4 @@ desktop.ini
 # 이미지/볼륨은 보통 repo 밖에서 관리
 *.tar
 # 환경변수 변형본
-.docker.env
+.docker.envstaticfiles/
