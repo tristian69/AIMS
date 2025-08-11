@@ -240,6 +240,7 @@ input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit']) {
   -webkit-appearance: button;
+  appearance: button; 
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -287,6 +288,9 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 [type='search'] {
   -webkit-appearance: textfield;
+  appearance: textfield;         /* 표준 속성 - Firefox 등 지원 */
+
+  
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -425,9 +429,8 @@ iframe,
 embed,
 object {
   display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
+  align-items: center; /* 수직 가운데 */
+  justify-content: center; /* 수평 가운데 (선택) */
 }
 
 /*

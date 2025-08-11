@@ -4,3 +4,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['3.25.53.53',]
 
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # ...
+]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

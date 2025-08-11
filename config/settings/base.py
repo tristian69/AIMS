@@ -28,10 +28,9 @@ INSTALLED_APPS = [
     'corsheaders', # 앱은 여기
     'users',
     'dashboard',
+    'analytical',
 ]
 
-# settings.py
-INSTALLED_APPS += ['analytical']
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-XXXX-Y'
 
 MIDDLEWARE = [
@@ -54,16 +53,8 @@ CSRF_TRUSTED_ORIGINS = [
     ]  # "https://your-domain.com",
 
 CORS_ALLOW_CREDENTIALS = True
-# CORS: 하나만 선택
-# (A) 개발 중 전부 허용
+
 CORS_ALLOW_ALL_ORIGINS = True
-# (B) 특정 오리진만 허용하려면 위 줄을 False로 하고 아래 사용
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://aimsmanu.com",
-#     "https://aimsmanu.com",
-#     "https://api.aimsmanu.com",
-# ]
 
 # REST Framework 기본 설정
 REST_FRAMEWORK = {
