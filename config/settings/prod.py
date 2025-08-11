@@ -3,7 +3,22 @@ from .base import *
 DEBUG = False
 
 #ALLOWED_HOSTS = ['3.25.53.53',]
-ALLOWED_HOSTS = ['aimsmanu.com', 'www.aimsmanu.com',]
+ALLOWED_HOSTS = ['aimsmanu.com', 'www.aimsmanu.com',
+                 '127.0.0.1', 'localhost',
+                '3.25.53.53'  # runserver로 IP로 테스트할 때 필요
+                 ]
+
+# HTTPS 리버스프록시(Nginx) 사용 시 필수
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# CSRF: HTTPS 도메인 신뢰 추가
+CSRF_TRUSTED_ORIGINS = [
+    'https://aimsmanu.com',
+    'https://www.aimsmanu.com',
+]
+# (IP로 http 테스트한다면 임시로)
+# CSRF_TRUSTED_ORIGINS += ['http://YOUR.EC2.PUBLIC.IP']
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
