@@ -7,10 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-2w#22$#d362x(@_ob=!9y$$4n7z241x-qq=2hdg@qi4xi0cf@r'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['api.aimsmanu.com', '117.52.89.210', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ["api.aimsmanu.com"]
 CSRF_TRUSTED_ORIGINS = ["https://aimsmanu.com", "https://www.aimsmanu.com", "https://api.aimsmanu.com"]
 CORS_ALLOWED_ORIGINS = ["https://aimsmanu.com", "https://www.aimsmanu.com"]
@@ -140,12 +137,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
-STATIC_ROOT = BASE_DIR / 'statifiles'
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = Path(os.getenv("STATIC_ROOT", BASE_DIR / "staticfiles"))
+STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "static",]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

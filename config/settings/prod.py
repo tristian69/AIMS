@@ -4,6 +4,3 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['3.25.53.53',]
 
-STATIC_URL = '/static/'
-
-STATIC_ROOT = [BASE_DIR / 'static']
