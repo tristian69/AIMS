@@ -1,0 +1,42 @@
+# CSS는 LF로 고정
+*.css text eol=lf
+* text=auto eol=lf
+
+# 파이썬/웹 정규 텍스트 확장자 명시 (가독성용)
+*.py text
+*.html text
+*.htm text
+*.css text
+*.scss text
+*.less text
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+*.toml text
+*.ini text
+*.env text
+
+# 바이너리 파일은 diff/merge 비활성
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.zip binary
+*.7z binary
+*.gz binary
+*.tar binary
+*.mp3 binary
+*.mp4 binary
+*.mov binary

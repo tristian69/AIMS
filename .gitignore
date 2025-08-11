@@ -3,3 +3,110 @@ db.sqlite3
 __pycache__/
 *.pyc
 .venv_dj31/
+aims.pem
+aims.pub
+
+# -----------------------------
+# Python / Django
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.so
+*.pyo
+*.pyd
+
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+
+# 패키지/빌드
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 테스트/커버리지
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# 로깅/런타임 파일
+*.log
+*.pid
+*.seed
+celerybeat-schedule
+celerybeat.pid
+
+# 데이터베이스(로컬 개발용)
+db.sqlite3
+db.sqlite3-journal
+
+# 환경변수 파일 (비밀!)
+.env
+.env.*
+*.env
+*.env.*
+
+# Django 정적/미디어
+# 주: 소스 정적 폴더(static/)는 보통 커밋함.
+# collectstatic 결과물만 무시
+staticfiles/
+media/
+
+# 만약 소스 정적을 별도 저장소에서 제공한다면 아래 주석 해제 고려
+# static/
+
+# 업로드/임시 파일
+tmp/
+temp/
+*.tmp
+
+# -----------------------------
+# Node / React (선택)
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+# 빌드 산출물
+build/
+dist/
+.next/
+out/
+.cache/
+.eslintcache
+.stylelintcache
+
+# -----------------------------
+# IDE / OS 잡파일
+# -----------------------------
+# VS Code / JetBrains
+.vscode/
+.history/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------
+# Docker / Compose (선택)
+# -----------------------------
+# 이미지/볼륨은 보통 repo 밖에서 관리
+*.tar
+# 환경변수 변형본
+.docker.env
