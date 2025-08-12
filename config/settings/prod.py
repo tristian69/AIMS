@@ -4,7 +4,6 @@ DEBUG = False
 
 #ALLOWED_HOSTS = ['3.25.53.53',]
 ALLOWED_HOSTS = ['aimsmanu.com', 'www.aimsmanu.com',
-                 '127.0.0.1', 'localhost',
                 '3.25.53.53'  # runserver로 IP로 테스트할 때 필요
                  ]
 
@@ -20,16 +19,6 @@ CSRF_TRUSTED_ORIGINS = [
 # CSRF_TRUSTED_ORIGINS += ['http://YOUR.EC2.PUBLIC.IP']
 
 
-MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # Security 바로 뒤
-    "corsheaders.middleware.CorsMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-]
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware" ) # SecurityMiddleware 바로 다음
+    
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
