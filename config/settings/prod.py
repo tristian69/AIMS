@@ -3,9 +3,7 @@ from .base import *
 DEBUG = False
 
 #ALLOWED_HOSTS = ['3.25.53.53',]
-ALLOWED_HOSTS = ['aimsmanu.com', 'www.aimsmanu.com',
-                '3.25.53.53'  # runserver로 IP로 테스트할 때 필요
-                 ]
+ALLOWED_HOSTS = ['aimsmanu.com', 'www.aimsmanu.com' ]
 
 # HTTPS 리버스프록시(Nginx) 사용 시 필수
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
