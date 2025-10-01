@@ -1,11 +1,19 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %} AIMS AI-powered Intelligent Manuscript System {% endblock%}
+{% block title %} AIMS Artificial Intelligence Manuscript System {% endblock%}
 
 {% block content %}
-    <hr class="my-4">
-    <div class="py-6 px-6 bg-teal-600 rounded-xl text-center text-white">
-        <h1 class="mb-6 text-xl"> Dashboard : AIMS</h1>        
+    {# -- 메인 인트로 섹션 -- #}
+    {% block intro_section %}
+    <section class="py-6 px-6 bg-teal-600 rounded-xl text-center text-blue">
+        <h1 class="mb-6 text-xl">AIMS : Artificial Intelligence Manuscript System</h1>
+    </section>
+    {% endblock %}        
+
+    {# -- 기능 테이블 섹션 -- #}
+    {% block feature_table %}
+    <section class="mt-6">
         <table class="w-full table-auto bg-teal-300 rounded-xl">            
             <thead>
                 <tr>
@@ -14,24 +22,38 @@
             </thead>            
             <tbody class="font-semibold">
                 <tr class="flex justify-between">
-                <td class="px-4 py-4 w-1/2">논문/원고 제출</td>
-                <td class="px-4 py-4 w-1/2">Submission</td>
+                    <td class="px-4 py-4 w-1/2 space-x-2">논문/원고 제출</td>
+                    <td class="px-4 py-4 w-1/2 space-x-2">
+                        <a href="{% url 'manuscripts:submission' %}" class="py-2 px-2 space-x-2 text-sm text-gray-600 rounded-xl hover:text-teal-600">  submission </a>
+                    </td>
                 </tr>
                 <tr class="flex justify-between">
-                <td class="px-4 py-4 w-1/2">AI 기반 심사 추천 및 자동화</td>
-                <td class="px-4 py-4 w-1/2">AI Reviewer Recommendation</td>
+                    <td class="px-4 py-4 w-1/2">AI 기반 심사 추천 및 자동화</td>
+                    <td class="px-4 py-4 w-1/2">
+                            <a href="{% url 'aireview:aireview' %}" class="py-2 px-2 space-x-2 text-sm text-gray-600 rounded-xl hover:text-teal-600">  AI Reviewer Recommendation </a>
+                    </td>
                 </tr>
                 <tr class="flex justify-between">
-                <td class="px-4 py-4 w-1/2">편집 및 상태 추적 (Editorial Workflow)</td>
+                    <td class="px-4 py-4 w-1/2">편집 및 상태 추적 </td>
+                    <td class="px-4 py-4 w-1/2">
+                        <a href="{% url 'editor:editor' %}" class="py-2 px-2 space-x-2 text-sm text-gray-600 rounded-xl hover:text-teal-600"> Editorial Workflow </a>
+                    </td>
                 </tr>
                 <tr class="flex justify-between">
-                <td class="px-4 py-4 w-1/2">출판 및 메타데이터 관리 (Publication)</td>
+                    <td class="px-4 py-4 w-1/2">출판 및 메타데이터 관리 </td>
+                    <td class="px-4 py-4 w-1/2">
+                        <a href="{% url 'publication:publication' %}" class="py-2 px-2 space-x-2 text-sm text-gray-600 rounded-xl hover:text-teal-600">  Publication </a>
+                    </td>
                 </tr>
                 <tr class="flex justify-between">
-                <td class="px-4 py-4 w-1/2">사용자 역할 기반 대시보드 (Author / Reviewer / Editor)</td>
+                    <td class="px-4 py-4 w-1/2">사용자 역할 기반 대시보드 </td>
+                    <td class="px-4 py-4 w-1/2">
+                        <a href="{% url 'newstech:newstech' %}" class="py-2 px-2 space-x-2 text-sm text-gray-600 rounded-xl hover:text-teal-600">  Author / Reviewer / Editor </a>
+                    </td>
                 </tr>
             </tbody>
         </table>        
-    </div>        
+     </section>
+  {% endblock %}        
     
 {% endblock %}

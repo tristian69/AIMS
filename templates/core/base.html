@@ -1,35 +1,68 @@
 {% load static %}
 <!doctype html>
-<html>
-    <head>
+<html lang="ko">
+    <head>    
+        <!-- 기본 메타 정보 -->
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
+        <!-- 타이틀 블록 -->
+        <title>{% block title %}AIMS Artificial Intelligence Manuscript System{% endblock%}</title>
 
+        <!-- 기본 스타일 -->
+        <link rel="shortcut icon" href="{% static 'file/345224384' %}">
         <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/common_font.css' %}">
+        <link rel="stylesheet" href="{% static 'css/lib.css' %}">
+        <link rel="stylesheet" href="{% static 'css/skin.css' %}">
+        <link rel="stylesheet" href="{% static 'css/module_header.css' %}">
+        <link rel="stylesheet" href="{% static 'css/skin_main.css' %}">
+        <!-- 필요시 추가 CSS... -->
 
-        <title>{% block title %}AIMS AI-powered Intelligent Manuscript System{% endblock%}</title>
     </head>
     
     <body>
-        {% include 'core/partials/nav.html' %}
-
+         <!-- 공통 상단 -->
+        {% include 'shopping/shopping.html' %}   
+        {% include 'core/partials/nav.html' %}  
+        
+        <!-- Django 메시지 -->
         {% if messages %}
             <div class="py-6 px-6">
                 {% for message in messages %}
                     <div class="py-4 px-4 bg-teal-300 rounded-xl">
                         {{ message }}
                     </div>
-
                 {% endfor %}
-
             </div>
-
         {% endif %}
 
-
+        <!-- 개별 페이지 콘텐츠 -->
         {% block content %}
         {% endblock %}
 
-       {% include 'core/partials/footer.html' %}
+        <!-- 공통 하단 -->
+        {% include 'core/partials/company.html' %}
+        {% include 'core/partials/crm.html' %}
+        {% include 'core/partials/social.html' %}
+        {% include 'core/partials/footer.html' %}
+
+       <!-- ===================== 공통 JS ===================== -->
+        <script src="{% static 'lang/skin_js.js' %}"></script>
+        <script src="{% static 'lang/common.js' %}"></script>
+        <script src="{% static 'vendors/Jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendors/Twbs-pagination/jquery.twbsPagination.js' %}"></script>        
+        <script src="{% static 'vendors/Es-module-shims/es-module-shims.min.js' %}"></script>        
+        <script src="{% static 'vendors/Slick/slick.min.js' %}"></script>
+        <script src="{% static 'vendors/Swiper/swiper.min.js' %}"></script>
+        <script src="{% static 'vendors/froala_editor_4.0.8/js/froala_editor.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/Datepicker/js/datepicker.min.js' %}"></script>
+        <script src="{% static 'vendors/Dropzone/js/dropzone.min.js' %}"></script>
+        <script src="{% static 'vendors/Masonry/js/masonry.pkgd.min.js' %}"></script>
+        <script src="{% static 'js/common.js' %}"></script>
+        <script src="{% static 'js/commonAnalytics.js' %}"></script>
+        <script src="{% static 'js/skin_ui_functions.js' %}"></script>
+        <script src="{% static 'js/importmap.js' %}"></script>
+        <script src="{% static 'js/design_loader.js' %}"></script>
+        <script src="{% static 'js/modules/modules_ui.js' %}"></script>
     </body>
 </html>

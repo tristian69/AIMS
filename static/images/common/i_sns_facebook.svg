@@ -1,0 +1,16 @@
+<svg id="그룹_3" data-name="그룹 3" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b5998;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_8_copy" data-name="Ellipse 8 copy" class="cls-1" cx="30" cy="30" r="30"/>
+  <path class="cls-2" d="M1346.88,634.067V620.33h4.72l0.71-5.354h-5.43v-3.418c0-1.55.44-2.607,2.72-2.607l2.9,0v-4.787a39.746,39.746,0,0,0-4.23-.212c-4.18,0-7.04,2.5-7.04,7.078v3.948h-4.73v5.354h4.73v13.737h5.65Z" transform="translate(-1315 -588)"/>
+</svg>

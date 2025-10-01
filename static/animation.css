@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+@-webkit-keyframes fadeIn {
+	0%, 20% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+	0%, 20% { opacity: 0; transform: translate3d(0, 40px, 0); }
+	100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes fadeInDown {
+	0%, 20% { opacity: 0; transform: translate3d(0, -40px, 0); }
+	100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes fadeInRight {
+	0%, 20% { opacity: 0; transform: translate3d(40px, 0, 0); }
+	100% { opacity: 1;transform: translate3d(0, 0, 0); }
+}
+
+@keyframes fadeInLeft {
+	0%, 20% { opacity: 0; transform: translate3d(-40px, 0, 0); }
+	100% { opacity: 1;transform: translate3d(0, 0, 0); }
+}
+
+.module_container > a[data-effect] {display: block;}
+
+/* 페이드인 */
+[data-effect='fade-in'] {opacity: 0;}
+[data-effect='fade-in'].animate{animation:fade-in .4s cubic-bezier(.25,.46,.45,.94) both;}
+@keyframes fade-in{
+	100%{ opacity: 1;}
+}
+
+/* 날아오기 */
+[data-effect='slide-top'] {opacity: 0;}
+.normal_module:has([data-effect='slide-top']){overflow: hidden; position: relative;}
+[data-effect='slide-top'].animate{animation:slide-top .37s cubic-bezier(.25,.46,.45,.94) both;}
+@keyframes slide-top{
+	0%{	transform:translateY(-100px); }
+	100%{transform:translateY(0px); opacity: 1;}
+}
+
+[data-effect='slide-bottom'] {opacity: 0;}
+.normal_module:has([data-effect='slide-bottom']){overflow: hidden; position: relative;}
+[data-effect='slide-bottom'].animate{animation:slide-bottom .37s cubic-bezier(.25,.46,.45,.94) both;}
+@keyframes slide-bottom {
+	0%{	transform:translateY(100px); opacity: 0;}
+	100%{transform:translateY(0px); opacity: 1;} 
+}
+
+[data-effect='slide-left'] {opacity: 0;}
+[data-effect='slide-left'].animate{animation:slide-left .37s cubic-bezier(.25,.46,.45,.94) both;}
+@keyframes slide-left {
+	0%{transform:translateX(-100px);}
+	100%{transform:translateX(0); opacity: 1;}
+}
+
+[data-effect='slide-right'] {opacity: 0;}
+[data-effect='slide-right'].animate{animation:slide-right .37s cubic-bezier(.25,.46,.45,.94) both;}
+@keyframes slide-right {
+	0%{transform:translateX(100px);}
+	100%{transform:translateX(0); opacity: 1;}
+}
+
+/* 나타나기 */
+.normal_module:has([data-effect='mask-slide-top']){overflow: hidden; position: relative;}
+[data-effect='mask-slide-top'] {opacity: 0;}
+[data-effect='mask-slide-top'].animate{animation:mask-slide-top .7s cubic-bezier(.25,.46,.45,.94) both; opacity: 1;}
+@keyframes mask-slide-top {
+	0%{transform:translateY(-130vh);}
+	100%{transform:translateY(0);}
+}
+
+.normal_module:has([data-effect='mask-slide-bottom']){overflow: hidden; position: relative;}
+[data-effect='mask-slide-bottom'] {opacity: 0;}
+[data-effect='mask-slide-bottom'].animate{animation:mask-slide-bottom .7s cubic-bezier(.25,.46,.45,.94) both; opacity: 1;}
+@keyframes mask-slide-bottom {
+	0%{transform:translateY(130vh);}
+	100%{transform:translateY(0);}
+}
+
+.normal_module:has([data-effect='mask-slide-left']){overflow: hidden; position: relative;}
+[data-effect='mask-slide-left'] {opacity: 0;}
+[data-effect='mask-slide-left'].animate{animation:mask-slide-left .7s cubic-bezier(.25,.46,.45,.94) both; opacity: 1;}
+@keyframes mask-slide-left {
+	0%{transform:translateX(-100vw);}
+	100%{transform:translateX(0);}
+}
+
+.normal_module:has([data-effect='mask-slide-right']){overflow: hidden; position: relative;}
+[data-effect='mask-slide-right'] {opacity: 0;}
+[data-effect='mask-slide-right'].animate{animation:mask-slide-right .7s cubic-bezier(.25,.46,.45,.94) both; opacity: 1;}
+@keyframes mask-slide-right {
+	0%{transform:translateX(100vw);}
+	100%{transform:translateX(0);}
+}
+
+/*배경*/
+[data-effect='img-scale-up-hor-center'].animate {animation:img-scale-up-hor-center .7s cubic-bezier(.6,.575,.565,1.000) both}
+@keyframes img-scale-up-hor-center {
+	0%{margin:0 10%;}
+	100%{margin:0 0;}
+}
+
+

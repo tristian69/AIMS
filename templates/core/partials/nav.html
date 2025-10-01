@@ -1,14 +1,21 @@
-<nav class="py-6 px-6 flex justify-between bg-teal-500">
-    <a href="/" class="text-white"> AIMS AI-powered Intelligent Manuscript System </a>
-    <div class="space-x-4">
-        
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<nav class="py-6 px-6 flex justify-between bg-teal-500">    
+    <a href="/" class="rounded-xl text-white"> 
+        <img src="{% static 'images/logo_stand.png' %}" 
+            alt="AIMS" 
+            class="shopping-brand__logo w-32 h-auto"> Artificial Intelligence Manuscript System
+    </a>
+
+    <div class="space-x-4">        
         <a href="{% url 'about' %}" class="py-4 px-6 bg-teal-600 rounded-xl text-white"> About</a>
         {% if request.user.is_authenticated %}
             <a href="." class="text-white">{{ active_team.name }}</a>
             <a href="{% url 'dashboard:index' %}" class="py-4 px-6 bg-teal-600 rounded-xl text-white"> Dashboard</a>
             <a href="." class="py-4 px-6 bg-teal-600 rounded-xl text-white"> Leads</a>
             <a href="." class="py-4 px-6 bg-teal-600 rounded-xl text-white"> Clients</a>
-            <a href="{% url 'users:myaccount' %}" class="py-4 px-6 bg-teal-800 rounded-xl text-white"> My account</a>
+            <a href="{% url 'users:myaccount' %}" class="py-4 px-6 bg-teal-600 rounded-xl text-white"> My account</a>
             
         {% else %}
             <a href="{% url 'users:login' %}" class="py-4 px-6 bg-teal-600 rounded-xl text-white"> 로그인</a>
@@ -16,4 +23,471 @@
         {% endif %}
 
     </div>
+
+    <!-- 메인에서만 실행되어야하는 CSS -->
+    <script>
+        var LOGIN_TYPE = 'non-members';
+        var PAGE_CODE = 'main';
+        var PAGE_MODE = 'real';
+        var HEADER_CONFIG = {
+            "layout_type": "type1",
+            "header_module_name": "header_A001",
+            "header_module_parents": "header_A001",
+            "header_submenu_design": "design1",
+            "header_submenu_direction": "left",
+            "mypage_menu": "6",
+            "header_logo": "\/file\/2124692512",
+            "login_menu": "yes",
+            "login_menu_name": "로그인",
+            "logout_menu_name": "로그아웃",
+            "join_menu_name": "회원가입",
+            "login_before_greeting": null,
+            "login_after_greeting": "님",
+            "gnb_menu": "3",
+            "navigation_fontsize": "17",
+            "util_menu": "no",
+            "header_brightness": "dark",
+            "header_bgcolor": "#000000",
+            "navigation_color": "#F8F8F8",
+            "navigation_font": "Nanum Gothic",
+            "shopping_menuorder": null,
+            "shopping_my": "yes",
+            "shopping_cart": "yes",
+            "shopping_search": "yes",
+            "header_flying": "yes",
+            "page_code": "page_about",
+            "util_link": "[{\"name\":\"마이페이지\",\"address\":\"\\\/mypages\",\"target\":\"_self\"},{\"name\":\"고객센터\",\"address\":\"#\",\"target\":\"_self\"},{\"name\":\"사이트맵\",\"address\":\"#\",\"target\":\"_self\"}]"
+        };
+        var FOOTER_CONFIG = {
+            "footer_module_name": "footer_A007",
+            "footer_module_parents": "footer_A001",
+            "footer_textfield1": "no",
+            "footer_textfield1_source": null,
+            "footer_textfield2": "no",
+            "footer_textfield2_source": null,
+            "footer_menu": "yes",
+            "fnb_menu": "4",
+            "footer_logo_src": "\/file\/1599645061",
+            "footer_sns": "yes",
+            "footer_info": "yes",
+            "footer_hosting": "yes",
+            "footer_copyright": "yes",
+            "footer_copyright_source": "<p><span style=\"font-size:12px;\">COPYRIGHT (c) 에임즈 ALL RIGHTS RESERVED.<\/span><\/p><p><br><\/p>",
+            "footer_escro": "yes",
+            "footer_brightness": "light",
+            "footer_bgcolor2": "#ededed",
+            "footer_fontcolor": null,
+            "footer_fontcolor_default": "on",
+            "save_seq": "260",
+            "save_mode": "real",
+            "escro": "[{\"img_src\":\"\\\/file\\\/1057827558\",\"link_address\":\"#kicc_escrow\",\"link_target\":\"_blank\"}]"
+        };
+        var BLOCK_LAYOUTS = {
+            "module-1": {
+                "seq": 1696,
+                "save_seq": 257,
+                "block_id": "module-1",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "slide_B020",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:56",
+                "childs": [],
+                "module": {
+                    "module_name": "slide_B020",
+                    "content_type1": "slide",
+                    "content_type2": "slide-type-B",
+                    "module_possible": "normal",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/853319461",
+                    "module_parents": "slide_B001",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module slider_before_loading' data-content-type1='slide' data-content-type2='slide-type-B' data-module-name='slide_B020' data-module-parents='slide_B001' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap fullsize_max' data-layout-fullsize='yes'><div class='module_container' data-padding-top='0' data-padding-bottom='0' data-slide-image-width='1920' data-slide-image-height='810' data-slide-autoplay='yes' data-slide-autoplay-speed='6000' data-slide-motion='fade' data-slide-motion-function='ease' data-slide-motion-speed='1200' data-slide-arrows='no' data-slide-dots='yes' data-slides-to-show='1' data-slides-to-scroll='1' data-slide-cutting='60' data-slide-filter=''><\/div><\/div><\/div>",
+                    "module_contents": "<div class='slide_banner'><a href='#none' class='sslide'><img class='simg' src='https:\/\/resource.com\/storage\/1200502863' alt='' \/><div class='slide_contents'><div class='text_wrap'><div class='text_contents title' style='text-align: left;'><div data-text-editable='true' style='font-family: Open Sans; font-size: 65px; color: #fff; font-weight: 900;'><p style=' line-height: 1.1;'>Digital Creative<\/p><p style=' line-height: 1.1;'>Power groups.<\/p><\/div><div class='btn_area' style='padding:30px 0 0 2px;'><b class='imgChange'><img src='https:\/\/resource.com\/storage\/1287828060' alt='' \/><\/b><\/div><\/div><\/div><\/div><\/a><a href='#none' class='sslide'><img class='simg' src='https:\/\/resource.com\/storage\/1433734249' alt='' \/><div class='slide_contents'><div class='text_wrap'><div class='text_contents title' style='text-align: left;'><div data-text-editable='true' style='font-family: Open Sans; font-size: 65px; color: #fff; font-weight: 900;'><p style=' line-height: 1.1;'>Digital Creative<\/p><p style=' line-height: 1.1;'>Power groups.<\/p><\/div><div class='btn_area' style='padding:30px 0 0 2px;'><b class='imgChange'><img src='https:\/\/resource.com\/storage\/1287828060' alt='' \/><\/b><\/div><\/div><\/div><\/div><\/a><a href='#none' class='sslide'><img class='simg' src='https:\/\/resource.com\/storage\/1571391094' alt='' \/><div class='slide_contents'><div class='text_wrap'><div class='text_contents title' style='text-align: left;'><div data-text-editable='true' style='font-family: Open Sans; font-size: 65px; color: #fff; font-weight: 900;'><p style=' line-height: 1.1;'>Digital Creative<\/p><p style=' line-height: 1.1;'>Power groups.<\/p><\/div><div class='btn_area' style='padding:30px 0 0 2px;'><b class='imgChange'><img src='https:\/\/resource.com\/storage\/1287828060' alt='' \/><\/b><\/div><\/div><\/div><\/div><\/a><\/div>",
+                    "module_category1": "slide",
+                    "module_category2": ""
+                }
+            },
+            "module-31": {
+                "seq": 1697,
+                "save_seq": 257,
+                "block_id": "module-31",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "text_A001_1",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:56",
+                "childs": [],
+                "module": {
+                    "module_name": "text_A001_1",
+                    "content_type1": "text",
+                    "content_type2": "text-type-A",
+                    "module_possible": "all",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/1247625853",
+                    "module_parents": "text_A001",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module' data-content-type1='text' data-content-type2='text-type-A' data-module-name='text_A001_1' data-module-parents='text_A001' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='40' data-padding-bottom='40'><\/div><\/div><\/div>",
+                    "module_contents": "<div data-text-editable='true' style='font-size: 26px; font-family: Roboto; font-weight: 400; color: rgb(65, 143, 250); text-align: center;'><p>ABOUT<\/p><p style='font-size:10px;'>&nbsp;<\/p><\/div><div data-text-editable='true' style='font-size: 42px; font-weight: 700; color: rgb(34, 34, 34); text-align: center;'><p style='line-height: 1.2;'>비즈니스 성공의 가치를 탐구하며 전략을 수립합니다<\/p><\/div><div data-text-editable='true' style='font-size: 16px; color: #666; text-align: center;'><p>&nbsp;<\/p><p>트렌디한 디자인 시스템의 UX 통합가이드라인의<\/p><p>비즈니스 성공의 가치를 탐구하며 추구에 관하여 전략을 수립하여<\/p><p>커뮤니케이션 활동 추구 및 마케팅과 방향에 디자인의 본질의 스마트한 공간의 활동을 진행합니다.<\/p><\/div>",
+                    "module_category1": "text",
+                    "module_category2": ""
+                }
+            },
+            "module-30": {
+                "seq": 1698,
+                "save_seq": 257,
+                "block_id": "module-30",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "image_L008",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:57",
+                "childs": [],
+                "module": {
+                    "module_name": "image_L008",
+                    "content_type1": "image",
+                    "content_type2": "image-type-L",
+                    "module_possible": "normal",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/838169249",
+                    "module_parents": "layout_N4_01",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module' data-content-type1='image' data-content-type2='image-type-L' data-module-name='image_L008' data-module-parents='layout_N4_01' data-layout-type='T1' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='40' data-padding-bottom='40'><\/div><\/div><\/div>",
+                    "module_contents": "<ul><li><ul><li><div data-is-vacant='no' class='img_crop'><a href='#none' data-link-type='' target=''><b><img src='https:\/\/resource.com\/storage\/47801806' alt=''><\/b><\/a><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant='no' class='img_crop'><a href='#none' data-link-type='' target=''><b><img src='https:\/\/resource.com\/storage\/185466843' alt=''><\/b><\/a><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant='no' class='img_crop'><a href='#none' data-link-type='' target=''><b><img src='https:\/\/resource.com\/storage\/272648680' alt=''><\/b><\/a><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant='no' class='img_crop'><a href='#none' data-link-type='' target=''><b><img src='https:\/\/resource.com\/storage\/418694133' alt=''><\/b><\/a><\/div><\/li><\/ul><\/li><\/ul>",
+                    "module_category1": "image",
+                    "module_category2": ""
+                }
+            },
+            "module-20": {
+                "seq": 1699,
+                "save_seq": 257,
+                "block_id": "module-20",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "contents_A015",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:57",
+                "childs": [],
+                "module": {
+                    "module_name": "contents_A015",
+                    "content_type1": "contents",
+                    "content_type2": "contents-type-A",
+                    "module_possible": "normal",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/570625842",
+                    "module_parents": "contents_A001",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module' data-content-type1='contents' data-content-type2='contents-type-A' data-module-name='contents_A015' data-module-parents='contents_A001' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter='' data-contents-col-num='2' data-contents-all-num='2' data-contents-image-align='center'><div class='module_wrap' data-layout-fullsize='no'><div class='module_container list_style' data-padding-top='50' data-padding-bottom='50'><\/div><\/div><\/div>",
+                    "module_contents": "<ul class='contents_ul' data-child-list-deleteable='yes'><li><ul><li><div data-is-vacant='no'><div class='img_area C'><div class='img_crop'><a href='#none' data-link-type='' data-cutting-apply='yes'><b><img src='https:\/\/resource.com\/storage\/159140707' alt='' \/><\/b><\/a><\/div><\/div><div class='content_txt'><div data-text-editable='true' style='font-family: Montserrat; font-size: 24px; color: #333333; font-weight:600;'><p style='line-height:.5'>&nbsp;<\/p><p>MINIMALISM SHOP<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant='no'><div class='img_area C'><div class='img_crop'><a href='#none' data-link-type='' data-cutting-apply='yes'><b><img src='https:\/\/resource.com\/storage\/296797552' alt='' \/><\/b><\/a><\/div><\/div><div class='content_txt'><div data-text-editable='true' style='font-family: Montserrat; font-size: 24px; color: #333333; font-weight:600;'><p style='line-height:.5'>&nbsp;<\/p><p>SHOES COLLECTION 2021<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><\/ul>",
+                    "module_category1": "contentsB",
+                    "module_category2": ""
+                }
+            },
+            "module-21": {
+                "seq": 1700,
+                "save_seq": 257,
+                "block_id": "module-21",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "text_A016",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:57",
+                "childs": [],
+                "module": {
+                    "module_name": "text_A016",
+                    "content_type1": "text",
+                    "content_type2": "text-type-A",
+                    "module_possible": "all",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/1846596613",
+                    "module_parents": "text_A001",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module' data-content-type1='text' data-content-type2='text-type-A' data-module-name='text_A016' data-module-parents='text_A001' data-background-color='#f2f2f2' data-background-image='https:\/\/resource.com\/storage\/1471664168' data-background-image-options='' data-background-attachment='' data-background-filter='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container wow' data-padding-top='170' data-padding-bottom='170'><\/div><\/div><\/div>",
+                    "module_contents": "<div data-text-editable='true' style='font-size: 20px; font-weight: 700; color: #f45050; font-family: Montserrat;'><p>Black and White<\/p><p>&nbsp;<\/p><\/div><div data-text-editable='true' style='font-size: 50px; color: #020202; font-family: Montserrat; font-weight: 700; line-height:1;'><p>SOUND,<\/p><p>Back to basic<\/p><\/div>",
+                    "module_category1": "text",
+                    "module_category2": ""
+                }
+            },
+            "module-23": {
+                "seq": 1701,
+                "save_seq": 257,
+                "block_id": "module-23",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "builderProductA_A006",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:57",
+                "childs": [],
+                "module": {
+                    "module_name": "builderProductA_A006",
+                    "content_type1": "builderProductA",
+                    "content_type2": "builderProductA-type-A",
+                    "module_possible": "normal",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/1274614302",
+                    "module_parents": "",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_hashtag": "",
+                    "module_layout": "<div class='normal_module' data-module-name='builderProductA_A006' data-module-parents='' data-content-type1='builderProductA' data-content-type2='builderProductA-type-A' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter='' data-group-seq='' data-product-pagingtype='none' data-currency='won' data-display-name='yes' data-display-desc='yes' data-display-retailprice='yes' data-display-saleprice='yes' data-display-discountpercent='yes' data-display-discountcoupon='yes' data-image-type='cover' data-image-ratio='120' data-product-perpage='6' data-col-num='3' data-row-num='2' data-list-padding='T2' data-product-rounding='30' data-text-rounding='no' data-product-currentpage='1' data-product-lastpage=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='40' data-padding-bottom='40'><\/div><\/div><\/div>",
+                    "module_contents": "<div class='product_group_top_info'><div class='product_group_title' data-text-editable='true' style='font-size: 30px; line-height: 1.3; font-weight: 600; color: #020202; font-family: Montserrat, Noto Sans KR;'><p class='productGroupTitle'><\/p><\/div><div class='product_group_desc' data-text-editable='true' style='font-size: 20px; line-height: 1.3; font-weight: 400; color: #7a7a7a; font-family: Montserrat, Noto Sans KR;'><p>&nbsp;<\/p><p class='productGroupDesc'><\/p><p>&nbsp;<\/p><\/div><\/div><div class='product_list_type list_type_a' data-image-percent='yes'><ul class='productListAjax'><\/ul><\/div><div class='no_data_area'><\/div><div class='product_paging product_paging_1' data-margin-top='30'><a href='#none'><\/a><\/div><div class='product_paging product_paging_3' data-margin-top='30'><ul class='paging_navigation'><\/ul><\/div>",
+                    "module_category1": "builderProductA",
+                    "module_category2": ""
+                }
+            },
+            "module-24": {
+                "seq": 1702,
+                "save_seq": 257,
+                "block_id": "module-24",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "builderProductA_A006",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:58",
+                "childs": [],
+                "module": {
+                    "module_name": "builderProductA_A006",
+                    "content_type1": "builderProductA",
+                    "content_type2": "builderProductA-type-A",
+                    "module_possible": "normal",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/1274614302",
+                    "module_parents": "",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_hashtag": "",
+                    "module_layout": "<div class='normal_module' data-module-name='builderProductA_A006' data-module-parents='' data-content-type1='builderProductA' data-content-type2='builderProductA-type-A' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter='' data-group-seq='' data-product-pagingtype='none' data-currency='won' data-display-name='yes' data-display-desc='yes' data-display-retailprice='yes' data-display-saleprice='yes' data-display-discountpercent='yes' data-display-discountcoupon='yes' data-image-type='cover' data-image-ratio='120' data-product-perpage='6' data-col-num='3' data-row-num='2' data-list-padding='T2' data-product-rounding='30' data-text-rounding='no' data-product-currentpage='1' data-product-lastpage=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='40' data-padding-bottom='40'><\/div><\/div><\/div>",
+                    "module_contents": "<div class='product_group_top_info'><div class='product_group_title' data-text-editable='true' style='font-size: 30px; line-height: 1.3; font-weight: 600; color: #020202; font-family: Montserrat, Noto Sans KR;'><p class='productGroupTitle'><\/p><\/div><div class='product_group_desc' data-text-editable='true' style='font-size: 20px; line-height: 1.3; font-weight: 400; color: #7a7a7a; font-family: Montserrat, Noto Sans KR;'><p>&nbsp;<\/p><p class='productGroupDesc'><\/p><p>&nbsp;<\/p><\/div><\/div><div class='product_list_type list_type_a' data-image-percent='yes'><ul class='productListAjax'><\/ul><\/div><div class='no_data_area'><\/div><div class='product_paging product_paging_1' data-margin-top='30'><a href='#none'><\/a><\/div><div class='product_paging product_paging_3' data-margin-top='30'><ul class='paging_navigation'><\/ul><\/div>",
+                    "module_category1": "builderProductA",
+                    "module_category2": ""
+                }
+            },
+            "module-26": {
+                "seq": 1703,
+                "save_seq": 257,
+                "block_id": "module-26",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "text_A001_1",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:58",
+                "childs": [],
+                "module": {
+                    "module_name": "text_A001_1",
+                    "content_type1": "text",
+                    "content_type2": "text-type-A",
+                    "module_possible": "all",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/1247625853",
+                    "module_parents": "text_A001",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module' data-content-type1='text' data-content-type2='text-type-A' data-module-name='text_A001_1' data-module-parents='text_A001' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='40' data-padding-bottom='40'><\/div><\/div><\/div>",
+                    "module_contents": "<div data-text-editable='true' style='font-size: 26px; font-family: Roboto; font-weight: 400; color: rgb(65, 143, 250); text-align: center;'><p>ABOUT<\/p><p style='font-size:10px;'>&nbsp;<\/p><\/div><div data-text-editable='true' style='font-size: 42px; font-weight: 700; color: rgb(34, 34, 34); text-align: center;'><p style='line-height: 1.2;'>비즈니스 성공의 가치를 탐구하며 전략을 수립합니다<\/p><\/div><div data-text-editable='true' style='font-size: 16px; color: #666; text-align: center;'><p>&nbsp;<\/p><p>트렌디한 디자인 시스템의 UX 통합가이드라인의<\/p><p>비즈니스 성공의 가치를 탐구하며 추구에 관하여 전략을 수립하여<\/p><p>커뮤니케이션 활동 추구 및 마케팅과 방향에 디자인의 본질의 스마트한 공간의 활동을 진행합니다.<\/p><\/div>",
+                    "module_category1": "text",
+                    "module_category2": ""
+                }
+            },
+            "module-27": {
+                "seq": 1704,
+                "save_seq": 257,
+                "block_id": "module-27",
+                "parent_block": null,
+                "child_num": null,
+                "block_template": "contents_A024",
+                "sort_num": 0,
+                "regist_date": "2022-07-15 10:25:58",
+                "childs": [],
+                "module": {
+                    "module_name": "contents_A024",
+                    "content_type1": "contents",
+                    "content_type2": "contents-type-A",
+                    "module_possible": "normal",
+                    "module_preview_src": "https:\/\/resource.com\/storage\/1604837274",
+                    "module_parents": "contents_A001",
+                    "module_distribute": "yes",
+                    "module_content_datas": null,
+                    "module_layout": "<div class='normal_module' data-content-type1='contents' data-content-type2='contents-type-A' data-module-name='contents_A024' data-module-parents='contents_A001' data-background-color='#131313' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter='' data-contents-col-num='2' data-contents-all-num='2' data-contents-image-align=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container list_style' data-padding-top='50' data-padding-bottom='50'><\/div><\/div><\/div>",
+                    "module_contents": "<ul class='contents_ul' data-child-list-deleteable='yes' data-edit-pos-x='right' data-edit-pos-y='90'><li><ul><li><div data-is-vacant='no' class='contents_wrap'><div class='img_area'><div class='img_crop'><a href='#none' data-link-type='' data-cutting-apply='yes'><b><img src='https:\/\/resource.com\/storage\/1421694159' alt=''\/><\/b><\/a><\/div><\/div><div class='text_area'><div data-text-editable='true' style='font-size: 30px; font-weight: 700; color:#fff; font-family: Noto Sans KR; text-align: left;line-height:1.5;' class='fr_ls-005'><p style='text-align:left !important;'>강력한 성능과 기능<\/p><\/div><div data-text-editable='true' style='font-family: Noto Sans KR; font-size: 17px; color: #fff; text-align: left;' class=''><p>&nbsp;<\/p><p style='text-align:left !important;'>심플한 디자인으로 편리하게<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant='no' class='contents_wrap'><div class='img_area'><div class='img_crop'><a href='#none' data-link-type='' data-cutting-apply='yes'><b><img src='https:\/\/resource.com\/storage\/1576120028' alt=''\/><\/b><\/a><\/div><\/div><div class='text_area'><div data-text-editable='true' style='font-size: 30px; font-weight: 700; color:#fff; font-family: Noto Sans KR; text-align: left;line-height:1.5;' class='fr_ls-005'><p style='text-align:left !important;'>프리미엄 배송<\/p><\/div><div data-text-editable='true' style='font-family: Noto Sans KR; font-size: 17px; color: #fff; text-align: left;' class=''><p>&nbsp;<\/p><p style='text-align:left !important;'>최우수전문 설치팀 배정<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><\/ul>",
+                    "module_category1": "contentsB",
+                    "module_category2": ""
+                }
+            }
+        };
+        var BLOCK_CONTENTS = [{
+            "block_id": "module-1",
+            "parent_block": null,
+            "detail_seq": 1696,
+            "html": "<div class=\"slide_banner\"><a class=\"sslide\" href=\"#none\" target=\"\" style=\"\"><img class=\"simg\" src=\"\/file\/411848119\" alt=\"\"><div class=\"slide_contents\" style=\"background-image: url(&quot;..\/images\/bg_white_per0.png&quot;);\" ..=\"\" images=\"\" bg_white_per0.png\");\"=\"\" bg_.png\");\"=\"\"><div class=\"text_wrap\"><div class=\"text_contents title\" style=\"text-align: left;\"><div data-text-editable=\"true\" style=\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\" class=\"\"><p>간편하고 새롭게<\/p><p>탑제된 디스플레이<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\" class=\"fr_ls-005\"><p>편리하면서 심플한 디자인<\/p><\/div><\/div><\/div><\/div><\/a><a class=\"sslide\" href=\"#none\" target=\"\" style=\"\"><img class=\"simg\" src=\"\/file\/2034299672\" alt=\"\"><div class=\"slide_contents\" style=\"background-image: url(&quot;..\/images\/bg_white_per0.png&quot;);\" ..=\"\" images=\"\" bg_white_per0.png\");\"=\"\" bg_.png\");\"=\"\"><div class=\"text_wrap\"><div class=\"text_contents title\" style=\"text-align: left;\"><div data-text-editable=\"true\" style=\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\" class=\"\"><p><span style=\"color:#ffffff;\">새로운 라이프 스타일<\/span><\/p><p><span style=\"color:#ffffff;\">편리한 기능<\/span><\/p><\/div><div data-text-editable=\"true\" style=\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\" class=\"fr_ls-005\"><p><span style=\"color:#ffffff;\">편리하면서 심플한 디자인의 와치<\/span><\/p><\/div><\/div><\/div><\/div><\/a><a class=\"sslide\" href=\"#none\" target=\"\" style=\"\"><img class=\"simg\" src=\"\/file\/1509259389\" alt=\"\"><div class=\"slide_contents\" style=\"background-image: url(&quot;..\/images\/bg_white_per0.png&quot;);\" ..=\"\" images=\"\" bg_white_per0.png\");\"=\"\" bg_.png\");\"=\"\"><div class=\"text_wrap\"><div class=\"text_contents title\" style=\"text-align: left;\"><div data-text-editable=\"true\" style=\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\" class=\"\"><p>음악을 이해하고&nbsp;<\/p><p>완성하다<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\" class=\"fr_ls-005\"><p>노이즈캔슬링의 최고 성능<\/p><\/div><\/div><\/div><\/div><\/a><a class=\"sslide\" href=\"#none\" target=\"\" style=\"\"><img class=\"simg\" src=\"\/file\/967434718\" alt=\"\"><div class=\"slide_contents\" style=\"background-image: url(&quot;..\/images\/bg_white_per0.png&quot;);\" ..=\"\" images=\"\" bg_white_per0.png\");\"=\"\" bg_.png\");\"=\"\"><div class=\"text_wrap\"><div class=\"text_contents title\" style=\"text-align: left;\"><div data-text-editable=\"true\" style=\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\" class=\"\"><p>무선 노이즈 캔슬링<\/p><p>사운드의 완성<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\" class=\"fr_ls-005\"><p>웅장하면서 완벽한 사운드<\/p><\/div><\/div><\/div><\/div><\/a><\/div>",
+            "options": "{\"layout-fullsize\":\"yes\",\"padding-top\":\"0\",\"padding-bottom\":\"0\",\"background-color\":null,\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null,\"slide-arrows\":\"no\",\"slide-dots\":\"yes\",\"slide-autoplay\":\"yes\",\"slides-to-show\":\"1\",\"slide-autoplay-speed\":\"10000\",\"slide-motion\":\"fade\",\"slide-motion-function\":\"ease\",\"slide-motion-speed\":\"1200\",\"slide-cutting\":\"60\",\"slide-image-width\":\"1920\",\"slide-image-height\":\"720\",\"slide-contents\":[{\"slide-image-src\":\"\\\/file\\\/411848119\",\"slide-link-url\":null,\"slide-link-target\":null,\"slide-text-contents\":\"<div class=\\\"slide_contents\\\" style=\\\"background-image: url(&quot;..\\\/images\\\/bg_white_per0.png&quot;);\\\" ..=\\\"\\\" images=\\\"\\\" bg_white_per0.png\\\");\\\"=\\\"\\\" bg_.png\\\");\\\"=\\\"\\\"><div class=\\\"text_wrap\\\"><div class=\\\"text_contents title\\\" style=\\\"text-align: left;\\\"><div data-text-editable=\\\"true\\\" style=\\\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\\\" class=\\\"\\\"><p>간편하고 새롭게<\\\/p><p>탑제된 디스플레이<\\\/p><\\\/div><div data-text-editable=\\\"true\\\" style=\\\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\\\" class=\\\"fr_ls-005\\\"><p>편리하면서 심플한 디자인<\\\/p><\\\/div><\\\/div><\\\/div><\\\/div>\"},{\"slide-image-src\":\"\\\/file\\\/2034299672\",\"slide-link-url\":null,\"slide-link-target\":null,\"slide-text-contents\":\"<div class=\\\"slide_contents\\\" style=\\\"background-image: url(&quot;..\\\/images\\\/bg_white_per0.png&quot;);\\\" ..=\\\"\\\" images=\\\"\\\" bg_white_per0.png\\\");\\\"=\\\"\\\" bg_.png\\\");\\\"=\\\"\\\"><div class=\\\"text_wrap\\\"><div class=\\\"text_contents title\\\" style=\\\"text-align: left;\\\"><div data-text-editable=\\\"true\\\" style=\\\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\\\" class=\\\"\\\"><p><span style=\\\"color:#ffffff;\\\">새로운 라이프 스타일<\\\/span><\\\/p><p><span style=\\\"color:#ffffff;\\\">편리한 기능<\\\/span><\\\/p><\\\/div><div data-text-editable=\\\"true\\\" style=\\\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\\\" class=\\\"fr_ls-005\\\"><p><span style=\\\"color:#ffffff;\\\">편리하면서 심플한 디자인의 와치<\\\/span><\\\/p><\\\/div><\\\/div><\\\/div><\\\/div>\"},{\"slide-image-src\":\"\\\/file\\\/1509259389\",\"slide-link-url\":null,\"slide-link-target\":null,\"slide-text-contents\":\"<div class=\\\"slide_contents\\\" style=\\\"background-image: url(&quot;..\\\/images\\\/bg_white_per0.png&quot;);\\\" ..=\\\"\\\" images=\\\"\\\" bg_white_per0.png\\\");\\\"=\\\"\\\" bg_.png\\\");\\\"=\\\"\\\"><div class=\\\"text_wrap\\\"><div class=\\\"text_contents title\\\" style=\\\"text-align: left;\\\"><div data-text-editable=\\\"true\\\" style=\\\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\\\" class=\\\"\\\"><p>음악을 이해하고&nbsp;<\\\/p><p>완성하다<\\\/p><\\\/div><div data-text-editable=\\\"true\\\" style=\\\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\\\" class=\\\"fr_ls-005\\\"><p>노이즈캔슬링의 최고 성능<\\\/p><\\\/div><\\\/div><\\\/div><\\\/div>\"},{\"slide-image-src\":\"\\\/file\\\/967434718\",\"slide-link-url\":null,\"slide-link-target\":null,\"slide-text-contents\":\"<div class=\\\"slide_contents\\\" style=\\\"background-image: url(&quot;..\\\/images\\\/bg_white_per0.png&quot;);\\\" ..=\\\"\\\" images=\\\"\\\" bg_white_per0.png\\\");\\\"=\\\"\\\" bg_.png\\\");\\\"=\\\"\\\"><div class=\\\"text_wrap\\\"><div class=\\\"text_contents title\\\" style=\\\"text-align: left;\\\"><div data-text-editable=\\\"true\\\" style=\\\"font-family: Noto Sans KR;font-size: 60px;color: #222222;font-weight: 900;line-height:1.3;\\\" class=\\\"\\\"><p>무선 노이즈 캔슬링<\\\/p><p>사운드의 완성<\\\/p><\\\/div><div data-text-editable=\\\"true\\\" style=\\\"margin-top: 2em; margin-bottom:1em; font-family: Noto Sans KR;font-size: 20px;color: #222222;font-weight: 500;line-height:1.3;\\\" class=\\\"fr_ls-005\\\"><p>웅장하면서 완벽한 사운드<\\\/p><\\\/div><\\\/div><\\\/div><\\\/div>\"}],\"slide-filter\":\"white_per0\"}",
+            "content_datas": null
+        }, {
+            "block_id": "module-31",
+            "parent_block": null,
+            "detail_seq": 1697,
+            "html": "<div data-text-editable=\"true\" style=\"font-size: 46px; font-weight: 700; color: rgb(34, 34, 34); text-align: center;\" class=\"fr_ls-01\"><p>오늘의 추천상품<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top:.5em; font-family:Noto Sans KR; font-size: 18px; font-weight: 400; color: rgb(88, 88, 88); text-align: center;\" class=\"fr_ls-01\"><p>고민없이 선택하는 추천상품입니다.<\/p><\/div>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"120\",\"padding-bottom\":\"20\",\"background-color\":\"#f4f4f4\",\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null}",
+            "content_datas": null
+        }, {
+            "block_id": "module-30",
+            "parent_block": null,
+            "detail_seq": 1698,
+            "html": "<ul><li><ul><li><div data-is-vacant=\"no\" class=\"img_crop\"><a href=\"#none\" data-link-type=\"\" target=\"\"><b><img src=\"\/file\/442394403\" alt=\"\"><\/b><\/a><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant=\"no\" class=\"img_crop\"><a href=\"#none\" data-link-type=\"\" target=\"\"><b><img src=\"\/file\/2048060548\" alt=\"\"><\/b><\/a><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant=\"no\" class=\"img_crop\"><a href=\"#none\" data-link-type=\"\" target=\"\"><b><img src=\"\/file\/1522996713\" alt=\"\"><\/b><\/a><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant=\"no\" class=\"img_crop\"><a href=\"#none\" data-link-type=\"\" target=\"\"><b><img src=\"\/file\/997956426\" alt=\"\"><\/b><\/a><\/div><\/li><\/ul><\/li><\/ul>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"20\",\"padding-bottom\":\"110\",\"background-color\":\"#f4f4f4\",\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null}",
+            "content_datas": null
+        }, {
+            "block_id": "module-20",
+            "parent_block": null,
+            "detail_seq": 1699,
+            "html": "<ul class=\"contents_ul\" data-child-list-deleteable=\"yes\"><li><ul><li><div data-is-vacant=\"no\"><div class=\"img_area C\"><div class=\"img_crop\"> <a href=\"#none\" data-link-type=\"\" data-cutting-apply=\"yes\"><b><img src=\"\/file\/455606447\" alt=\"\"><\/b><\/a><\/div><\/div><div class=\"content_txt\"><div data-text-editable=\"true\" style=\"margin-top:.5em; font-family: Montserrat; font-size: 24px; color: #333333; font-weight:600;\" class=\"\"><p><span style=\"color: rgb(88, 101, 245);\">NEW<\/span>&nbsp; WS-XZ1000<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top:.5em; font-family: Montserrat; font-size: 16px; color: rgb(164, 164, 164); font-weight:600;\" class=\"\"><p>감각적인 스타일의 블루투스 헤드폰<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant=\"no\"><div class=\"img_area C\"><div class=\"img_crop\"> <a href=\"#none\" data-link-type=\"\" data-cutting-apply=\"yes\"><b><img src=\"\/file\/2078050800\" alt=\"\"><\/b><\/a><\/div><\/div><div class=\"content_txt\"><div data-text-editable=\"true\" style=\"margin-top:.5em; font-family: Montserrat; font-size: 24px; color: #333333; font-weight:600;\" class=\"\"><p><span style=\"color: rgb(255, 78, 0);\">BEST<\/span> LINKAM-CA1400<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top:.5em; font-family: Montserrat; font-size: 16px; color: rgb(164, 164, 164); font-weight:600;\" class=\"\"><p>드라이버를 탑재한 첫번째 고성능 이어폰<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><\/ul>",
+            "options": "{\"layout-fullsize\":\"yes\",\"padding-top\":\"100\",\"padding-bottom\":\"100\",\"background-color\":null,\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null,\"contents-image-align\":\"center\",\"contents-col-num\":\"2\"}",
+            "content_datas": null
+        }, {
+            "block_id": "module-21",
+            "parent_block": null,
+            "detail_seq": 1700,
+            "html": "<div data-text-editable=\"true\" style=\"font-size: 20px; font-weight: 700; color: #fff; font-family: Montserrat;\" class=\"\"><p>Black and White<\/p><p>&nbsp;<\/p><\/div><div data-text-editable=\"true\" style=\"font-size: 50px; color: #fff; font-family: Noto Sans KR; font-weight: 700; line-height:1.2;\" class=\"\"><p>다양한 스타일로<\/p><p>자유롭게&nbsp;<\/p><\/div>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"170\",\"padding-bottom\":\"170\",\"background-color\":\"#f2f2f2\",\"background-image\":\"\\\/file\\\/887033727\",\"background-image-options\":\"size_cover\",\"background-attachment\":\"fixed\",\"background-filter\":\"white_per0\"}",
+            "content_datas": null
+        }, {
+            "block_id": "module-23",
+            "parent_block": null,
+            "detail_seq": 1701,
+            "html": "<div class=\"product_group_top_info\"><div class=\"product_group_title fr_ls-01\" data-text-editable=\"true\" style=\"font-size: 46px; font-weight: 700; color: rgb(34, 34, 34); text-align: center;\"><p class=\"productGroupTitle\">요즘 잘나가는 상품<\/p><\/div><div class=\"product_group_desc\" data-text-editable=\"true\" style=\"margin-top:.5em; font-family:Noto Sans KR; font-size: 18px; font-weight: 400; color: rgb(88, 88, 88); text-align: center;\"><p class=\"productGroupDesc\">고객님들이 좋아하는 잘나가는 상품입니다.<\/p><p><br><\/p><p><br><\/p><\/div><\/div><div class=\"product_list_type list_type_a\" data-image-percent=\"yes\"><ul class=\"productListAjax\"><\/ul><\/div><div class=\"no_data_area\" style=\"display: none;\"><\/div><div class=\"product_paging product_paging_1\" data-margin-top=\"30\"><a href=\"#none\"><\/a><\/div><div class=\"product_paging product_paging_3\" data-margin-top=\"30\"><ul class=\"paging_navigation\"><\/ul><\/div>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"140\",\"padding-bottom\":\"40\",\"background-color\":null,\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null,\"group-seq\":\"1\",\"product-pagingtype\":\"none\",\"product-perpage\":\"4\",\"col-num\":\"4\",\"row-num\":\"1\",\"list-padding\":\"T2\",\"image-ratio\":\"120\",\"product-rounding\":\"30\",\"display-name\":\"yes\",\"display-desc\":\"yes\",\"display-retailprice\":\"yes\",\"display-saleprice\":\"yes\",\"display-discountpercent\":\"yes\"}",
+            "content_datas": null
+        }, {
+            "block_id": "module-24",
+            "parent_block": null,
+            "detail_seq": 1702,
+            "html": "<div class=\"product_group_top_info\"><div style=\"font-size: 46px; font-weight: 700; color: rgb(34, 34, 34); text-align: center;\" data-text-editable=\"true\" class=\"product_group_title fr_ls-01\"><p class=\"productGroupTitle\">당신에게 맞는 제품은?<\/p><\/div><div class=\"product_group_desc\" data-text-editable=\"true\" style=\"margin-top:.5em; font-family:Noto Sans KR; font-size: 18px; font-weight: 400; color: rgb(88, 88, 88); text-align: center;\"><p class=\"productGroupDesc\">고민없이 선택하는 추천상품입니다.<\/p><p><br><\/p><p><br><\/p><\/div><\/div><div class=\"product_list_type list_type_a\" data-image-percent=\"yes\"><ul class=\"productListAjax\"><\/ul><\/div><div class=\"no_data_area\" style=\"display: none;\"><\/div><div class=\"product_paging product_paging_1\" data-margin-top=\"30\"><a href=\"#none\"><\/a><\/div><div class=\"product_paging product_paging_3\" data-margin-top=\"30\"><ul class=\"paging_navigation\"><\/ul><\/div>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"130\",\"padding-bottom\":\"100\",\"background-color\":null,\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null,\"group-seq\":\"1\",\"product-pagingtype\":\"none\",\"product-perpage\":\"4\",\"col-num\":\"4\",\"row-num\":\"1\",\"list-padding\":\"T2\",\"image-ratio\":\"120\",\"product-rounding\":\"30\",\"display-name\":\"yes\",\"display-desc\":\"yes\",\"display-retailprice\":\"yes\",\"display-saleprice\":\"yes\",\"display-discountpercent\":\"yes\"}",
+            "content_datas": null
+        }, {
+            "block_id": "module-26",
+            "parent_block": null,
+            "detail_seq": 1703,
+            "html": "<div data-text-editable=\"true\" style=\"font-size: 46px; font-weight: 700; color: #fff; text-align: center;\" class=\"fr_ls-005\"><p>서비스 TIP<\/p><\/div><div data-text-editable=\"true\" style=\"margin-top:.5em; font-family:Noto Sans KR; font-size: 18px; font-weight: 400; color: #fff; text-align: center;\" class=\"\"><p>간단한 팁과 해결방법을 찾아보세요!<\/p><\/div>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"70\",\"padding-bottom\":\"40\",\"background-color\":\"#131313\",\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null}",
+            "content_datas": null
+        }, {
+            "block_id": "module-27",
+            "parent_block": null,
+            "detail_seq": 1704,
+            "html": "<ul class=\"contents_ul\" data-child-list-deleteable=\"yes\" data-edit-pos-x=\"right\" data-edit-pos-y=\"90\"><li><ul><li><div data-is-vacant=\"no\" class=\"contents_wrap\"><div class=\"img_area\"><div class=\"img_crop\"><a href=\"#none\" data-link-type=\"\" data-cutting-apply=\"yes\"><b><img src=\"https:\/\/storage.com\/images\/module_contents\/contents_A024_a.png\" alt=\"\"><\/b><\/a><\/div><\/div><div class=\"text_area\"><div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 700; color:#fff; font-family: Noto Sans KR; text-align: left;line-height:1.5;\" class=\"fr_ls-005\"><p>강력한 성능과 기능<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Noto Sans KR; font-size: 17px; color: #fff; text-align: left;\" class=\"\"><p>&nbsp;<\/p><p>심플한 디자인으로 편리하게<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><li><ul><li><div data-is-vacant=\"no\" class=\"contents_wrap\"><div class=\"img_area\"><div class=\"img_crop\"><a href=\"#none\" data-link-type=\"\" data-cutting-apply=\"yes\"><b><img src=\"https:\/\/storage.com\/images\/module_contents\/contents_A024_b.png\" alt=\"\"><\/b><\/a><\/div><\/div><div class=\"text_area\"><div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 700; color:#fff; font-family: Noto Sans KR; text-align: left;line-height:1.5;\" class=\"fr_ls-005\"><p>프리미엄 배송<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Noto Sans KR; font-size: 17px; color: #fff; text-align: left;\" class=\"\"><p>&nbsp;<\/p><p>최우수전문 설치팀 배정<\/p><\/div><\/div><\/div><\/li><\/ul><\/li><\/ul>",
+            "options": "{\"layout-fullsize\":\"no\",\"padding-top\":\"10\",\"padding-bottom\":\"150\",\"background-color\":\"#131313\",\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null,\"contents-image-align\":null,\"contents-col-num\":\"2\"}",
+            "content_datas": null
+        }];
+        var BASIC_CONFIG = {
+            "site_name": "에임즈",
+            "co_name": "에임즈",
+            "ceo_name": "주병관",
+            "co_phone": "01082866096",
+            "co_email": "bkju2010@aimsmanu.com",
+            "co_zipcode": "61181",
+            "co_address": "광주 북구 반룡로 23-3",
+            "co_address_detail": "1층",
+            "co_regist_num": "198-94-02148",
+            "co_it_num": "0000-0000",
+            "site_desc": "AIMS는  Artificial Intelligence for Manuscript System, 또는  AI-powered Intelligent Manuscript Submission\/Management System의 약자로, 출판사의 원고 접수부터 심사, 편집, 출판까지의 모든 단계를 자동화 및 지능화하는 출판용 인공지능 원고 관리 시스템을 운용하는 출판사",
+            "co_nation": "kr",
+            "co_fax": null,
+            "timezone": "Asia\/Seoul",
+            "date_format": "Y.m.d",
+            "currency": "krw",
+            "sns_img": null,
+            "fav_img": "\/file\/345224384",
+            "map_type": "direct",
+            "co_category": "정보통신업",
+            "co_category_item": "일반서적출판업",
+            "fav_img_tmp": "\/file\/1707399047",
+            "og_site_name": "에임즈"
+        };
+
+        var MAP_CONFIG = {
+            "map_type": "direct",
+            "map_service_type": "kakao",
+            "map_api": {
+                "naver": {
+                    "client_id": null,
+                    "client_secret": null
+                },
+                "kakao": {
+                    "api_key": null
+                },
+                "google": {
+                    "api_key": null
+                }
+            },
+            "map_feature": {
+                "map_marker_icon": null,
+                "map_zoom": null,
+                "map_zoom_control": null
+            },
+            "map_script": {
+                "KAKAO": "https:\/\/dapi.kakao.com\/v2\/maps\/sdk.js?libraries=services,clusterer,drawing&appkey=",
+                "NAVER": "https:\/\/oapi.map.naver.com\/openapi\/v3\/maps.js?submodules=geocoder&ncpKeyId=",
+                "GOOGLE": "https:\/\/maps.googleapis.com\/maps\/api\/js?key="
+            }
+        };
+
+        var PAGE_CONFIG = '';
+
+        var _PATH = "\/";
+
+        var MODULES_STORAGE_BASE_URI = "https:\/\/resource.com\/";
+        const ENABLE_COMMERCE = "Y";
+
+        var jcv = '20250812072520';
+    </script>
+    <script src="{% static 'lang/skin_js.js' %}"></script>
+    <script src="{% static 'lang/common.js' %}"></script>
+    <script src="{% static 'vendors/Jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/Twbs-pagination/jquery.twbsPagination.js' %}"></script>
+    <script src="{% static 'js/common.js' %}"></script>
+    <script src="{% static 'js/commonAnalytics.js' %}"></script>
+    <script src="{% static 'js/skin_ui_functions.js' %}"></script>
+    <!--우선 순위 높아야하는 UI Functions -->
+    <script>
+        var USER = ""
+        const SITE_CONFIG_OPTION = {
+            "rightClick": "N",
+            "mouseDrag": "N",
+            "mobileZoom": "Y"
+        }
+    </script>
+    <script type="text/javascript">
+        const GLOBAL_NAVER_KEYWORD_AUTO_TRACKING = {
+            "enable": "N"
+        };
+    </script>
+<!-- ===================== 하단 스크립트 ===================== -->
+    <script src="{% static 'vendors/Es-module-shims/es-module-shims.min.js' %}"></script>
+    <script src="{% static 'js/importmap.js' %}"></script>
+    <script src="{% static 'vendors/Slick/slick.min.js' %}"></script>
+    <script src="{% static 'vendors/Swiper/swiper.min.js' %}"></script>
+<!-- Swiper js-->
+<!-- Froala Editor -->
+    <script src="{% static 'vendors/froala_editor_4.0.8/js/froala_editor.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendors/froala_editor_4.0.8/js/languages/kr.js' %}"></script>
+    <script src="{% static 'vendors/froala_editor_4.0.8/js/third_party/font_awesome.min.js' %}"></script>
+    <script src="{% static 'vendors/TossFace/froala_editor_4.0.8/emoticons.min.js' %}"></script>
+    <script src="{% static 'vendors/Wow/wow.min.js' %}"></script>
+<!-- Wow.js -->
+    <script src="{% static 'vendors/Datepicker/js/datepicker.min.js' %}"></script>
+<!-- datapicker -->
+    <script src="{% static 'vendors/Datepicker/lang/datepicker.lang.js' %}"></script>
+<!-- datapicker language -->
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<!-- 카카오 우편번호 API -->
+<!-- Talk Talk Banner Script start -->
+    <script src="{% static 'vendors/NaverTalkTalk/navertalktalk.js' %}"></script>
+<!-- Talk Talk Banner Script end -->
+<!-- 지도 API -->
+    <!-- 주소 변환 -->
+    <script src="{% static 'js/postcode.js' %}"></script>
+    <script src="{% static 'vendors/Dropzone/js/dropzone.min.js' %}"></script>
+    <script src="{% static 'vendors/Masonry/js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/DesignEditors/buttonStyleListData.js' %}"></script>
+    <script src="{% static 'js/DesignEditors/defaultData.js' %}"></script>
+    <script src="{% static 'js/design_loader.js' %}"></script>
+    <script src="{% static 'js/modules/modules_ui.js' %}"></script> 
+    <script src="{% static 'js/DesignEditors/Skins/mainStage.js' %}?v=20250812072520"></script>
 </nav>
